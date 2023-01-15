@@ -58,6 +58,7 @@ img {
   padding: 1rem 1.5rem;
   transition: var(--transition1);
   user-select: none;
+  width: fit-content;
 }
 
 .explore_button:hover {
@@ -361,6 +362,14 @@ img {
   min-width: 100%;
   max-height: 300px;
   padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--dark3);
+  outline: none;
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+  border: 1px solid var(--orange);
 }
 
 .form_group textarea {
@@ -556,5 +565,26 @@ footer {
   /*===== Footer =====*/
   .footer_wrapper p {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about_image_wrapper {
+    grid-template-columns: 100%;
+    gap: 2rem;
+  }
+
+  .facts_wrapper {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .header_logo {
+    font-size: 28px;
+  }
+  .home_section_title {
+    font-size: 2rem;
+    line-height: 40px;
   }
 }
